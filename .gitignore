@@ -1,0 +1,28 @@
+# Rust
+target
+
+# images
+# plots/*.png
+
+# Python
+__pycache__/
+# build/
+# develop-eggs/
+# dist/
+# eggs/
+# .eggs/
+# lib/
+# lib64/
+# parts/
+# wheels/
+# *.egg-info/
+# .installed.cfg
+# *.egg
+
+# Jupyter Notebook
+# .jupyter
+# .ipynb_checkpoints
+
+# Environments
+# .env
+# .venv
