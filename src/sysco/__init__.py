@@ -1,6 +1,11 @@
+# import cvxpy as cvx
+from loguru import logger
+
 from sysco._core import hello_from_bin
-import cvxpy as cvx
+from sysco.controller.controller import Controller
+
+logger.debug(f"Importing {__name__}")
 
 
-def main() -> None:
-    print(hello_from_bin())
+def hello_from_rust() -> str:
+    return hello_from_bin()
