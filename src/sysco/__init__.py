@@ -2,7 +2,9 @@
 from loguru import logger
 
 from sysco._core import hello_from_bin
-from sysco.controller.controller import Controller
+# from sysco.controller.controller import Controller as Controller
+
+from .controller import BaseController as BaseController
 
 logger.debug(f"Importing {__name__}")
 
