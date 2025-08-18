@@ -1,10 +1,9 @@
-# import cvxpy as cvx
 from loguru import logger
 
 from sysco._core import hello_from_bin
-# from sysco.controller.controller import Controller as Controller
 
-from .controller import BaseController as BaseController
+from .controller import LQR as LQR
+from .controller import MPC as MPC
 
 logger.debug(f"Importing {__name__}")
 
