@@ -1,6 +1,6 @@
 [project]
 name = "sysco"
-version = "0.1.1b1"
+version = "0.1.1b2"
 classifiers = ["Development Status :: 3 - Alpha"]
 description = "Library for system and control tools"
 keywords = [
@@ -17,7 +17,12 @@ license = { text = "Apache License 2.0" }
 readme = "README.md"
 authors = [{ name = "Silvan Stadelmann", email = "silvasta3@gmail.com" }]
 requires-python = ">=3.13"
-dependencies = ["cvxpy>=1.6.5", "loguru>=0.7.3", "numpy>=2.2.6"]
+dependencies = [
+    "control>=0.10.2",
+    "cvxpy>=1.6.5",
+    "loguru>=0.7.3",
+    "numpy>=2.2.6",
+]
 
 [project.urls]
 Repository = "https://github.com/silvasta/sysco"
