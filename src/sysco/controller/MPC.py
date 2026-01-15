@@ -1,27 +1,42 @@
 from .base_controller import BaseController
 import numpy as np
 
+from sysco.schemas import SystemConfig, CostConfig, MPCConfig
 
-class MPC(BaseController):
+system: dict = {
+    "A": [[1, 0], [1, 1]],
+    "B": [[0], [1]],
+    "C": [0, 0],
+    "D": 0,
+}
+cost: dict = {
+    "Q": [[1, 0], [0, 1]],
+    "R": 1,
+}
+
+config = MPCConfig(
+    system=SystemConfig(**system),
+    cost=CostConfig(**cost),
+    horizon=5,
+)
+
+
+class MPC(BaseController[MPCConfig]):
     """Finite horizon, Constraints, ..."""
 
     horizon: int
 
-    def __init__(self):
-        pass
+    def __init__(self, config: MPCConfig):
+        super().__init__(config)
 
-    def get_next_input(self):
-        return np.ndarray([0, 0, 0])
-
-    # cost
+    def solve(self):
+        return np.array([0, 0, 0])
 
     def stage_cost(self):
         pass
 
     def terminal_cost(self):
         pass
-
-    # constraints
 
     def dynamics(self):
         pass
